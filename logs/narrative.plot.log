@@ -1,0 +1,4 @@
+2016-08-29 11:20:45,078 DEBUG: /var/www/virginia/narrative/seed/pat_registration.json [in /var/www/virginia/narrative/plot.py:52 in __loadPlotfromSeed]
+2016-08-29 11:20:45,079 DEBUG: True [in /var/www/virginia/narrative/plot.py:53 in __loadPlotfromSeed]
+2016-08-29 11:20:45,082 DEBUG: False [in /var/www/virginia/narrative/plot.py:61 in valid]
+2016-08-29 11:20:55,238 DEBUG: False [in /var/www/virginia/narrative/plot.py:61 in valid]

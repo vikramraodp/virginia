@@ -1,0 +1,1 @@
+2016-08-29 11:20:55,238 DEBUG: [(0, u'Ankur', u'PERSON', u'NNP'), (1, u'is', u'O', u'VBZ'), (2, u'35', u'O', u'CD'), (3, u'years', u'O', u'NNS'), (4, u'old', u'O', u'JJ'), (5, u'and', u'O', u'CC'), (6, u'lives', u'O', u'VBZ'), (7, u'in', u'O', u'IN'), (8, u'Bangalore', u'LOCATION', u'NNP')] [in /var/www/virginia/context/stanford_processor_context.py:49 in all]
