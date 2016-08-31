@@ -7,7 +7,7 @@ import json
 class Plot(Resource):
 
     def __init__(self):
-        self.plotDir = '/var/www/virginia/plot/seed'
+        self.plotDir = '/var/www/virginia/narrative/seed'
 
     def get(self):
         plots = [splitext(basename(plot))[0] for plot in listdir(self.plotDir) if (isfile(join(self.plotDir, plot)) and plot.endswith(".json"))]

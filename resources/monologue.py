@@ -57,14 +57,18 @@ class Monologue(Resource):
                         abort(422)
                     output = self.processor.process(plot, elem['monologue'])
                     results.append(output)
-                return json.dumps(results)
+                response = make_response(json.dumps(results))
+                response.headers['content-type'] = 'application/json; charset=utf-8'
+                return response
             elif isinstance(json_data, dict):
                 plot = self.__generatePlot(json_data)
                 logger.debug(str(plot==None))
                 if not plot or not plot.valid():
                     logger.error('Plot Valid - ' + str(plot.valid()))
                     abort(422)
-                return json.dumps(self.processor.process(plot, json_data['monologue']))
+                response = make_response(json.dumps(self.processor.process(plot, json_data['monologue'])))
+                response.headers['content-type'] = 'application/json; charset=utf-8'
+                return response
 
         abort(422)
 
