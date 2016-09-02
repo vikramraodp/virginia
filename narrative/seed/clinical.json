@@ -1,5 +1,5 @@
 {
-  "characters": [ "symptoms", "findings", "measurement"],
-  "identification": [ "SignSymptom", "DiseaseDisorder", "Measurement"],
+  "characters": [ "symptoms", "findings", "measurement", "medication"],
+  "identification": [ "SignSymptom", "DiseaseDisorder", "Measurement", "Medication"],
   "processor" : "cTakes"
 }
