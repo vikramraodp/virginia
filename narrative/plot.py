@@ -1,6 +1,7 @@
 import json
 import six
 from os.path import isfile, join
+from processors.processor_factory import ProcessorFactory
 
 import logging
 logger = logging.getLogger(__name__)
@@ -36,6 +37,12 @@ class Plot(object):
         elif isinstance(seed, six.string_types):
             self.__underlyingPlot = self.__loadPlotfromSeed(seed)
 
+        self._processor = None
+        if 'processor' in self.__underlyingPlot:
+            self._processor = ProcessorFactory.getProcessor(self.__underlyingPlot['processor'])
+        else:
+            self._processor = ProcessorFactory.getProcessor('stanford')
+
         self.__clear()
 
 
@@ -61,18 +68,29 @@ class Plot(object):
         logger.debug(str(self.__underlyingPlot == None))
         if self.__underlyingPlot:
             # Note: it may be unreasonable to expect 'identification' in all cases
-            if 'characters' in self.__underlyingPlot and 'synesthesia' in self.__underlyingPlot:
-                # if len(self.__underlyingPlot['characters']) == len(self.__underlyingPlot['synesthesia']) :
-                return True
+            if 'characters' in self.__underlyingPlot:
+                if 'synesthesia' in self.__underlyingPlot or 'identification' in self.__underlyingPlot:
+                    return True
 
         return False
+
+    def processor(self):
+        return self._processor
+
+    def hasSynesthesia(self):
+        return ('synesthesia' in self.__underlyingPlot)
+
+    def hasIdentification(self):
+        return ('identification' in self.__underlyingPlot)
 
     def all(self):
         all_list = []
         if self.valid():
             for idx,character in enumerate(self.__underlyingPlot['characters']):
-                if 'identification' in self.__underlyingPlot:
+                if self.hasIdentification() and self.hasSynesthesia():
                     tupl = (character,self.__underlyingPlot['identification'][idx],self.__underlyingPlot['synesthesia'][idx])
+                elif self.hasIdentification():
+                    tupl = (character,self.__underlyingPlot['identification'][idx],None)
                 else:
                     tupl = (character,None,self.__underlyingPlot['synesthesia'][idx])
                 all_list.append(tupl)

@@ -631,3 +631,358 @@
 [Wed Aug 31 19:24:57.548553 2016] [ssl:warn] [pid 2173:tid 139906149447552] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
 [Wed Aug 31 19:24:57.562017 2016] [ssl:warn] [pid 2174:tid 139906149447552] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
 [Wed Aug 31 19:37:29.112170 2016] [ssl:warn] [pid 2174:tid 139906149447552] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
+[Fri Sep 02 08:24:54.020301 2016] [ssl:warn] [pid 1819:tid 140205179881344] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
+[Fri Sep 02 08:24:54.033932 2016] [ssl:warn] [pid 1820:tid 140205179881344] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
+[Fri Sep 02 08:26:02.081236 2016] [:error] [pid 1824:tid 140204971124480] [client 10.0.2.2:54597] mod_wsgi (pid=1824): Target WSGI script '/var/www/virginia/server.wsgi' cannot be loaded as Python module.
+[Fri Sep 02 08:26:02.081320 2016] [:error] [pid 1824:tid 140204971124480] [client 10.0.2.2:54597] mod_wsgi (pid=1824): Exception occurred processing WSGI script '/var/www/virginia/server.wsgi'.
+[Fri Sep 02 08:26:02.081411 2016] [:error] [pid 1824:tid 140204971124480] [client 10.0.2.2:54597] Traceback (most recent call last):
+[Fri Sep 02 08:26:02.081498 2016] [:error] [pid 1824:tid 140204971124480] [client 10.0.2.2:54597]   File "/var/www/virginia/server.wsgi", line 13, in <module>
+[Fri Sep 02 08:26:02.082663 2016] [:error] [pid 1824:tid 140204971124480] [client 10.0.2.2:54597]     from virginia import monologue_svc as application
+[Fri Sep 02 08:26:02.082752 2016] [:error] [pid 1824:tid 140204971124480] [client 10.0.2.2:54597]   File "/var/www/virginia/virginia.py", line 6, in <module>
+[Fri Sep 02 08:26:02.083790 2016] [:error] [pid 1824:tid 140204971124480] [client 10.0.2.2:54597]     from resources.monologue import Monologue
+[Fri Sep 02 08:26:02.083868 2016] [:error] [pid 1824:tid 140204971124480] [client 10.0.2.2:54597]   File "/var/www/virginia/resources/monologue.py", line 4, in <module>
+[Fri Sep 02 08:26:02.085209 2016] [:error] [pid 1824:tid 140204971124480] [client 10.0.2.2:54597]     from narrative.plot import Plot
+[Fri Sep 02 08:26:02.085292 2016] [:error] [pid 1824:tid 140204971124480] [client 10.0.2.2:54597]   File "/var/www/virginia/narrative/plot.py", line 4, in <module>
+[Fri Sep 02 08:26:02.086416 2016] [:error] [pid 1824:tid 140204971124480] [client 10.0.2.2:54597]     from processors.processor_factory import ProcessorFactory
+[Fri Sep 02 08:26:02.086500 2016] [:error] [pid 1824:tid 140204971124480] [client 10.0.2.2:54597]   File "/var/www/virginia/processors/processor_factory.py", line 3, in <module>
+[Fri Sep 02 08:26:02.087833 2016] [:error] [pid 1824:tid 140204971124480] [client 10.0.2.2:54597]     from processors.ctakes_processor import CTakesProcessor
+[Fri Sep 02 08:26:02.087927 2016] [:error] [pid 1824:tid 140204971124480] [client 10.0.2.2:54597]   File "/var/www/virginia/processors/ctakes_processor.py", line 5, in <module>
+[Fri Sep 02 08:26:02.089275 2016] [:error] [pid 1824:tid 140204971124480] [client 10.0.2.2:54597]     from strategy.weighted_match import AggregatedMatchStrategy
+[Fri Sep 02 08:26:02.089406 2016] [:error] [pid 1824:tid 140204971124480] [client 10.0.2.2:54597] ImportError: cannot import name AggregatedMatchStrategy
+[Fri Sep 02 08:28:02.657747 2016] [ssl:warn] [pid 1937:tid 139883512928128] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
+[Fri Sep 02 08:28:02.669453 2016] [ssl:warn] [pid 1938:tid 139883512928128] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
+[Fri Sep 02 08:28:09.177691 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604] mod_wsgi (pid=1941): Exception occurred processing WSGI script '/var/www/virginia/server.wsgi'.
+[Fri Sep 02 08:28:09.177800 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604] Traceback (most recent call last):
+[Fri Sep 02 08:28:09.177880 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2000, in __call__
+[Fri Sep 02 08:28:09.179005 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]     return self.wsgi_app(environ, start_response)
+[Fri Sep 02 08:28:09.179089 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1991, in wsgi_app
+[Fri Sep 02 08:28:09.179172 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]     response = self.make_response(self.handle_exception(e))
+[Fri Sep 02 08:28:09.179294 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 271, in error_router
+[Fri Sep 02 08:28:09.180451 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]     return original_handler(e)
+[Fri Sep 02 08:28:09.180591 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1567, in handle_exception
+[Fri Sep 02 08:28:09.180691 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]     reraise(exc_type, exc_value, tb)
+[Fri Sep 02 08:28:09.180764 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 268, in error_router
+[Fri Sep 02 08:28:09.180843 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]     return self.handle_error(e)
+[Fri Sep 02 08:28:09.180914 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1988, in wsgi_app
+[Fri Sep 02 08:28:09.180993 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]     response = self.full_dispatch_request()
+[Fri Sep 02 08:28:09.181061 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1641, in full_dispatch_request
+[Fri Sep 02 08:28:09.181134 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]     rv = self.handle_user_exception(e)
+[Fri Sep 02 08:28:09.181208 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 271, in error_router
+[Fri Sep 02 08:28:09.181318 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]     return original_handler(e)
+[Fri Sep 02 08:28:09.181414 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1544, in handle_user_exception
+[Fri Sep 02 08:28:09.181496 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]     reraise(exc_type, exc_value, tb)
+[Fri Sep 02 08:28:09.181568 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 268, in error_router
+[Fri Sep 02 08:28:09.181692 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]     return self.handle_error(e)
+[Fri Sep 02 08:28:09.181778 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1639, in full_dispatch_request
+[Fri Sep 02 08:28:09.181860 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]     rv = self.dispatch_request()
+[Fri Sep 02 08:28:09.181954 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1625, in dispatch_request
+[Fri Sep 02 08:28:09.182038 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]     return self.view_functions[rule.endpoint](**req.view_args)
+[Fri Sep 02 08:28:09.182117 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 477, in wrapper
+[Fri Sep 02 08:28:09.182194 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]     resp = resource(*args, **kwargs)
+[Fri Sep 02 08:28:09.182270 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]   File "/usr/local/lib/python2.7/dist-packages/flask/views.py", line 84, in view
+[Fri Sep 02 08:28:09.182616 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]     return self.dispatch_request(*args, **kwargs)
+[Fri Sep 02 08:28:09.182698 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 587, in dispatch_request
+[Fri Sep 02 08:28:09.182863 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]     resp = meth(*args, **kwargs)
+[Fri Sep 02 08:28:09.183013 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]   File "/var/www/virginia/resources/monologue.py", line 60, in post
+[Fri Sep 02 08:28:09.184764 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]     plot = self.__generatePlot(json_data)
+[Fri Sep 02 08:28:09.184909 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]   File "/var/www/virginia/resources/monologue.py", line 73, in __generatePlot
+[Fri Sep 02 08:28:09.185242 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]     return Plot(data['seed'])
+[Fri Sep 02 08:28:09.185324 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]   File "/var/www/virginia/narrative/plot.py", line 42, in __init__
+[Fri Sep 02 08:28:09.186506 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]     self._processor = ProcessorFactory.getProcessor(self.__underlyingPlot['processor'])
+[Fri Sep 02 08:28:09.186585 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]   File "/var/www/virginia/processors/processor_factory.py", line 13, in getProcessor
+[Fri Sep 02 08:28:09.187689 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604]     if processor_type in instances:
+[Fri Sep 02 08:28:09.187795 2016] [:error] [pid 1941:tid 139883284768512] [client 10.0.2.2:54604] NameError: global name 'instances' is not defined
+[Fri Sep 02 08:29:56.075890 2016] [ssl:warn] [pid 1938:tid 139883512928128] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
+[Fri Sep 02 08:30:00.830440 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614] mod_wsgi (pid=2033): Exception occurred processing WSGI script '/var/www/virginia/server.wsgi'.
+[Fri Sep 02 08:30:00.830540 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614] Traceback (most recent call last):
+[Fri Sep 02 08:30:00.830615 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2000, in __call__
+[Fri Sep 02 08:30:00.831031 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]     return self.wsgi_app(environ, start_response)
+[Fri Sep 02 08:30:00.831105 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1991, in wsgi_app
+[Fri Sep 02 08:30:00.831192 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]     response = self.make_response(self.handle_exception(e))
+[Fri Sep 02 08:30:00.831259 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 271, in error_router
+[Fri Sep 02 08:30:00.831465 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]     return original_handler(e)
+[Fri Sep 02 08:30:00.831536 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1567, in handle_exception
+[Fri Sep 02 08:30:00.831610 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]     reraise(exc_type, exc_value, tb)
+[Fri Sep 02 08:30:00.831675 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 268, in error_router
+[Fri Sep 02 08:30:00.831757 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]     return self.handle_error(e)
+[Fri Sep 02 08:30:00.831823 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1988, in wsgi_app
+[Fri Sep 02 08:30:00.831897 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]     response = self.full_dispatch_request()
+[Fri Sep 02 08:30:00.831968 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1641, in full_dispatch_request
+[Fri Sep 02 08:30:00.832044 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]     rv = self.handle_user_exception(e)
+[Fri Sep 02 08:30:00.832113 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 271, in error_router
+[Fri Sep 02 08:30:00.832235 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]     return original_handler(e)
+[Fri Sep 02 08:30:00.832305 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1544, in handle_user_exception
+[Fri Sep 02 08:30:00.832379 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]     reraise(exc_type, exc_value, tb)
+[Fri Sep 02 08:30:00.832445 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 268, in error_router
+[Fri Sep 02 08:30:00.832517 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]     return self.handle_error(e)
+[Fri Sep 02 08:30:00.832582 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1639, in full_dispatch_request
+[Fri Sep 02 08:30:00.832655 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]     rv = self.dispatch_request()
+[Fri Sep 02 08:30:00.832722 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1625, in dispatch_request
+[Fri Sep 02 08:30:00.832796 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]     return self.view_functions[rule.endpoint](**req.view_args)
+[Fri Sep 02 08:30:00.832863 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 477, in wrapper
+[Fri Sep 02 08:30:00.832935 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]     resp = resource(*args, **kwargs)
+[Fri Sep 02 08:30:00.833000 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]   File "/usr/local/lib/python2.7/dist-packages/flask/views.py", line 84, in view
+[Fri Sep 02 08:30:00.833120 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]     return self.dispatch_request(*args, **kwargs)
+[Fri Sep 02 08:30:00.833196 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 587, in dispatch_request
+[Fri Sep 02 08:30:00.833272 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]     resp = meth(*args, **kwargs)
+[Fri Sep 02 08:30:00.833338 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]   File "/var/www/virginia/resources/monologue.py", line 65, in post
+[Fri Sep 02 08:30:00.834428 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614]     response = make_response(json.dumps(plot.processor().process(plot, json_data['monologue'])))
+[Fri Sep 02 08:30:00.834512 2016] [:error] [pid 2033:tid 139883284768512] [client 10.0.2.2:54614] TypeError: processor() takes no arguments (1 given)
+[Fri Sep 02 08:31:53.957533 2016] [ssl:warn] [pid 1938:tid 139883512928128] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
+[Fri Sep 02 08:31:58.028723 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772] mod_wsgi (pid=2117): Exception occurred processing WSGI script '/var/www/virginia/server.wsgi'.
+[Fri Sep 02 08:31:58.028827 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772] Traceback (most recent call last):
+[Fri Sep 02 08:31:58.029006 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2000, in __call__
+[Fri Sep 02 08:31:58.029475 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]     return self.wsgi_app(environ, start_response)
+[Fri Sep 02 08:31:58.029549 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1991, in wsgi_app
+[Fri Sep 02 08:31:58.029633 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]     response = self.make_response(self.handle_exception(e))
+[Fri Sep 02 08:31:58.029701 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 271, in error_router
+[Fri Sep 02 08:31:58.029907 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]     return original_handler(e)
+[Fri Sep 02 08:31:58.029977 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1567, in handle_exception
+[Fri Sep 02 08:31:58.030051 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]     reraise(exc_type, exc_value, tb)
+[Fri Sep 02 08:31:58.030117 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 268, in error_router
+[Fri Sep 02 08:31:58.030189 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]     return self.handle_error(e)
+[Fri Sep 02 08:31:58.030255 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1988, in wsgi_app
+[Fri Sep 02 08:31:58.030327 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]     response = self.full_dispatch_request()
+[Fri Sep 02 08:31:58.030394 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1641, in full_dispatch_request
+[Fri Sep 02 08:31:58.030466 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]     rv = self.handle_user_exception(e)
+[Fri Sep 02 08:31:58.030533 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 271, in error_router
+[Fri Sep 02 08:31:58.030615 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]     return original_handler(e)
+[Fri Sep 02 08:31:58.030684 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1544, in handle_user_exception
+[Fri Sep 02 08:31:58.030758 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]     reraise(exc_type, exc_value, tb)
+[Fri Sep 02 08:31:58.030824 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 268, in error_router
+[Fri Sep 02 08:31:58.030896 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]     return self.handle_error(e)
+[Fri Sep 02 08:31:58.030961 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1639, in full_dispatch_request
+[Fri Sep 02 08:31:58.031033 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]     rv = self.dispatch_request()
+[Fri Sep 02 08:31:58.031107 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1625, in dispatch_request
+[Fri Sep 02 08:31:58.031181 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]     return self.view_functions[rule.endpoint](**req.view_args)
+[Fri Sep 02 08:31:58.031247 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 477, in wrapper
+[Fri Sep 02 08:31:58.031406 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]     resp = resource(*args, **kwargs)
+[Fri Sep 02 08:31:58.031487 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]   File "/usr/local/lib/python2.7/dist-packages/flask/views.py", line 84, in view
+[Fri Sep 02 08:31:58.031625 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]     return self.dispatch_request(*args, **kwargs)
+[Fri Sep 02 08:31:58.031697 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 587, in dispatch_request
+[Fri Sep 02 08:31:58.031772 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]     resp = meth(*args, **kwargs)
+[Fri Sep 02 08:31:58.031838 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]   File "/var/www/virginia/resources/monologue.py", line 66, in post
+[Fri Sep 02 08:31:58.033153 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772]     processor = plot.processor()
+[Fri Sep 02 08:31:58.033246 2016] [:error] [pid 2117:tid 139883404580608] [client 10.0.2.2:54772] TypeError: processor() takes no arguments (1 given)
+[Fri Sep 02 08:32:34.794383 2016] [ssl:warn] [pid 1938:tid 139883512928128] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
+[Fri Sep 02 08:34:35.007102 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934] mod_wsgi (pid=2227): Exception occurred processing WSGI script '/var/www/virginia/server.wsgi'.
+[Fri Sep 02 08:34:35.007301 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934] Traceback (most recent call last):
+[Fri Sep 02 08:34:35.007505 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2000, in __call__
+[Fri Sep 02 08:34:35.007979 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]     return self.wsgi_app(environ, start_response)
+[Fri Sep 02 08:34:35.008187 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1991, in wsgi_app
+[Fri Sep 02 08:34:35.008282 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]     response = self.make_response(self.handle_exception(e))
+[Fri Sep 02 08:34:35.008356 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 271, in error_router
+[Fri Sep 02 08:34:35.008573 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]     return original_handler(e)
+[Fri Sep 02 08:34:35.008645 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1567, in handle_exception
+[Fri Sep 02 08:34:35.008721 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]     reraise(exc_type, exc_value, tb)
+[Fri Sep 02 08:34:35.008789 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 268, in error_router
+[Fri Sep 02 08:34:35.008863 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]     return self.handle_error(e)
+[Fri Sep 02 08:34:35.008929 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1988, in wsgi_app
+[Fri Sep 02 08:34:35.009003 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]     response = self.full_dispatch_request()
+[Fri Sep 02 08:34:35.009071 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1641, in full_dispatch_request
+[Fri Sep 02 08:34:35.009144 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]     rv = self.handle_user_exception(e)
+[Fri Sep 02 08:34:35.009293 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 271, in error_router
+[Fri Sep 02 08:34:35.009394 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]     return original_handler(e)
+[Fri Sep 02 08:34:35.009488 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1544, in handle_user_exception
+[Fri Sep 02 08:34:35.009562 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]     reraise(exc_type, exc_value, tb)
+[Fri Sep 02 08:34:35.009629 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 268, in error_router
+[Fri Sep 02 08:34:35.009712 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]     return self.handle_error(e)
+[Fri Sep 02 08:34:35.009779 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1639, in full_dispatch_request
+[Fri Sep 02 08:34:35.009853 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]     rv = self.dispatch_request()
+[Fri Sep 02 08:34:35.009919 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1625, in dispatch_request
+[Fri Sep 02 08:34:35.009992 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]     return self.view_functions[rule.endpoint](**req.view_args)
+[Fri Sep 02 08:34:35.010060 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 477, in wrapper
+[Fri Sep 02 08:34:35.010133 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]     resp = resource(*args, **kwargs)
+[Fri Sep 02 08:34:35.010213 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]   File "/usr/local/lib/python2.7/dist-packages/flask/views.py", line 84, in view
+[Fri Sep 02 08:34:35.010341 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]     return self.dispatch_request(*args, **kwargs)
+[Fri Sep 02 08:34:35.010412 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 587, in dispatch_request
+[Fri Sep 02 08:34:35.010488 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]     resp = meth(*args, **kwargs)
+[Fri Sep 02 08:34:35.010557 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]   File "/var/www/virginia/resources/monologue.py", line 67, in post
+[Fri Sep 02 08:34:35.013165 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]     response = make_response(json.dumps(processor.process(plot, json_data['monologue'])))
+[Fri Sep 02 08:34:35.013660 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]   File "/var/www/virginia/processors/ctakes_processor.py", line 43, in process
+[Fri Sep 02 08:34:35.019113 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]     self.__processingPreflight(monologue)
+[Fri Sep 02 08:34:35.019502 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]   File "/var/www/virginia/processors/ctakes_processor.py", line 19, in __processingPreflight
+[Fri Sep 02 08:34:35.021115 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]     self.__updateprocessorContext()
+[Fri Sep 02 08:34:35.021341 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]   File "/var/www/virginia/processors/ctakes_processor.py", line 40, in __updateprocessorContext
+[Fri Sep 02 08:34:35.021695 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934]     self._context.create(self.tokens,entities,[])
+[Fri Sep 02 08:34:35.021800 2016] [:error] [pid 2227:tid 139883326732032] [client 10.0.2.2:54934] AttributeError: CTakesProcessor instance has no attribute 'tokens'
+[Fri Sep 02 08:35:30.579398 2016] [ssl:warn] [pid 1938:tid 139883512928128] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
+[Fri Sep 02 08:35:35.488671 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941] mod_wsgi (pid=2298): Exception occurred processing WSGI script '/var/www/virginia/server.wsgi'.
+[Fri Sep 02 08:35:35.489184 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941] Traceback (most recent call last):
+[Fri Sep 02 08:35:35.489329 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2000, in __call__
+[Fri Sep 02 08:35:35.489891 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]     return self.wsgi_app(environ, start_response)
+[Fri Sep 02 08:35:35.490290 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1991, in wsgi_app
+[Fri Sep 02 08:35:35.490802 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]     response = self.make_response(self.handle_exception(e))
+[Fri Sep 02 08:35:35.491293 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 271, in error_router
+[Fri Sep 02 08:35:35.491954 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]     return original_handler(e)
+[Fri Sep 02 08:35:35.492075 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1567, in handle_exception
+[Fri Sep 02 08:35:35.492265 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]     reraise(exc_type, exc_value, tb)
+[Fri Sep 02 08:35:35.492371 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 268, in error_router
+[Fri Sep 02 08:35:35.492478 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]     return self.handle_error(e)
+[Fri Sep 02 08:35:35.492591 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1988, in wsgi_app
+[Fri Sep 02 08:35:35.492693 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]     response = self.full_dispatch_request()
+[Fri Sep 02 08:35:35.492785 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1641, in full_dispatch_request
+[Fri Sep 02 08:35:35.492904 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]     rv = self.handle_user_exception(e)
+[Fri Sep 02 08:35:35.493008 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 271, in error_router
+[Fri Sep 02 08:35:35.493096 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]     return original_handler(e)
+[Fri Sep 02 08:35:35.493163 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1544, in handle_user_exception
+[Fri Sep 02 08:35:35.493247 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]     reraise(exc_type, exc_value, tb)
+[Fri Sep 02 08:35:35.493313 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 268, in error_router
+[Fri Sep 02 08:35:35.493386 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]     return self.handle_error(e)
+[Fri Sep 02 08:35:35.493453 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1639, in full_dispatch_request
+[Fri Sep 02 08:35:35.493531 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]     rv = self.dispatch_request()
+[Fri Sep 02 08:35:35.493606 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1625, in dispatch_request
+[Fri Sep 02 08:35:35.493680 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]     return self.view_functions[rule.endpoint](**req.view_args)
+[Fri Sep 02 08:35:35.493754 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 477, in wrapper
+[Fri Sep 02 08:35:35.493827 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]     resp = resource(*args, **kwargs)
+[Fri Sep 02 08:35:35.493899 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]   File "/usr/local/lib/python2.7/dist-packages/flask/views.py", line 84, in view
+[Fri Sep 02 08:35:35.494046 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]     return self.dispatch_request(*args, **kwargs)
+[Fri Sep 02 08:35:35.494120 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 587, in dispatch_request
+[Fri Sep 02 08:35:35.494196 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]     resp = meth(*args, **kwargs)
+[Fri Sep 02 08:35:35.494272 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]   File "/var/www/virginia/resources/monologue.py", line 67, in post
+[Fri Sep 02 08:35:35.496499 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]     response = make_response(json.dumps(processor.process(plot, json_data['monologue'])))
+[Fri Sep 02 08:35:35.496582 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]   File "/var/www/virginia/processors/ctakes_processor.py", line 44, in process
+[Fri Sep 02 08:35:35.498121 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]     self.result['out'] = self._strategy.apply(plot,self._context)
+[Fri Sep 02 08:35:35.498211 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]   File "/var/www/virginia/strategy/aggregated_match.py", line 23, in apply
+[Fri Sep 02 08:35:35.499395 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]     self.__process()
+[Fri Sep 02 08:35:35.499480 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]   File "/var/www/virginia/strategy/aggregated_match.py", line 39, in __process
+[Fri Sep 02 08:35:35.499833 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941]     new_match = {'for':self._pipeline['remaining'][idx][0],'match':','.join(result), 'possiblities':[]}
+[Fri Sep 02 08:35:35.499938 2016] [:error] [pid 2298:tid 139883404580608] [client 10.0.2.2:54941] TypeError: sequence item 0: expected string, tuple found
+[Fri Sep 02 08:42:44.336168 2016] [ssl:warn] [pid 1938:tid 139883512928128] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
+[Fri Sep 02 08:42:49.947343 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239] mod_wsgi (pid=2512): Exception occurred processing WSGI script '/var/www/virginia/server.wsgi'.
+[Fri Sep 02 08:42:49.947477 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239] Traceback (most recent call last):
+[Fri Sep 02 08:42:49.947628 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2000, in __call__
+[Fri Sep 02 08:42:49.948121 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]     return self.wsgi_app(environ, start_response)
+[Fri Sep 02 08:42:49.949045 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1991, in wsgi_app
+[Fri Sep 02 08:42:49.949133 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]     response = self.make_response(self.handle_exception(e))
+[Fri Sep 02 08:42:49.949291 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 271, in error_router
+[Fri Sep 02 08:42:49.949525 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]     return original_handler(e)
+[Fri Sep 02 08:42:49.949609 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1567, in handle_exception
+[Fri Sep 02 08:42:49.949695 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]     reraise(exc_type, exc_value, tb)
+[Fri Sep 02 08:42:49.949764 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 268, in error_router
+[Fri Sep 02 08:42:49.949840 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]     return self.handle_error(e)
+[Fri Sep 02 08:42:49.949908 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1988, in wsgi_app
+[Fri Sep 02 08:42:49.949983 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]     response = self.full_dispatch_request()
+[Fri Sep 02 08:42:49.950052 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1641, in full_dispatch_request
+[Fri Sep 02 08:42:49.950130 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]     rv = self.handle_user_exception(e)
+[Fri Sep 02 08:42:49.950317 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 271, in error_router
+[Fri Sep 02 08:42:49.950400 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]     return original_handler(e)
+[Fri Sep 02 08:42:49.950498 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1544, in handle_user_exception
+[Fri Sep 02 08:42:49.950574 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]     reraise(exc_type, exc_value, tb)
+[Fri Sep 02 08:42:49.950662 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 268, in error_router
+[Fri Sep 02 08:42:49.950754 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]     return self.handle_error(e)
+[Fri Sep 02 08:42:49.950837 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1639, in full_dispatch_request
+[Fri Sep 02 08:42:49.950926 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]     rv = self.dispatch_request()
+[Fri Sep 02 08:42:49.950993 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1625, in dispatch_request
+[Fri Sep 02 08:42:49.951067 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]     return self.view_functions[rule.endpoint](**req.view_args)
+[Fri Sep 02 08:42:49.951137 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 477, in wrapper
+[Fri Sep 02 08:42:49.951227 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]     resp = resource(*args, **kwargs)
+[Fri Sep 02 08:42:49.951314 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]   File "/usr/local/lib/python2.7/dist-packages/flask/views.py", line 84, in view
+[Fri Sep 02 08:42:49.951450 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]     return self.dispatch_request(*args, **kwargs)
+[Fri Sep 02 08:42:49.951538 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 587, in dispatch_request
+[Fri Sep 02 08:42:49.951688 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]     resp = meth(*args, **kwargs)
+[Fri Sep 02 08:42:49.951777 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]   File "/var/www/virginia/resources/monologue.py", line 67, in post
+[Fri Sep 02 08:42:49.953464 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]     response = make_response(json.dumps(processor.process(plot, json_data['monologue'])))
+[Fri Sep 02 08:42:49.953556 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]   File "/var/www/virginia/processors/ctakes_processor.py", line 44, in process
+[Fri Sep 02 08:42:49.954841 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]     self.result['out'] = self._strategy.apply(plot,self._context)
+[Fri Sep 02 08:42:49.954929 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]   File "/var/www/virginia/strategy/aggregated_match.py", line 23, in apply
+[Fri Sep 02 08:42:49.956192 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]     self.__process()
+[Fri Sep 02 08:42:49.956281 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]   File "/var/www/virginia/strategy/aggregated_match.py", line 39, in __process
+[Fri Sep 02 08:42:49.956625 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239]     new_match = {'for':self._pipeline['remaining'][idx][0],'match':','.join(result[1]), 'possiblities':[]}
+[Fri Sep 02 08:42:49.956732 2016] [:error] [pid 2512:tid 139883284768512] [client 10.0.2.2:55239] IndexError: list index out of range
+[Fri Sep 02 08:47:51.931316 2016] [ssl:warn] [pid 1938:tid 139883512928128] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
+[Fri Sep 02 09:09:42.080616 2016] [ssl:warn] [pid 1938:tid 139883512928128] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
+[Fri Sep 02 09:11:40.758693 2016] [ssl:warn] [pid 1938:tid 139883512928128] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
+[Fri Sep 02 09:11:45.034410 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581] mod_wsgi (pid=2943): Exception occurred processing WSGI script '/var/www/virginia/server.wsgi'.
+[Fri Sep 02 09:11:45.034531 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581] Traceback (most recent call last):
+[Fri Sep 02 09:11:45.034617 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2000, in __call__
+[Fri Sep 02 09:11:45.035063 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]     return self.wsgi_app(environ, start_response)
+[Fri Sep 02 09:11:45.035142 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1991, in wsgi_app
+[Fri Sep 02 09:11:45.035221 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]     response = self.make_response(self.handle_exception(e))
+[Fri Sep 02 09:11:45.035293 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 271, in error_router
+[Fri Sep 02 09:11:45.035515 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]     return original_handler(e)
+[Fri Sep 02 09:11:45.035587 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1567, in handle_exception
+[Fri Sep 02 09:11:45.035662 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]     reraise(exc_type, exc_value, tb)
+[Fri Sep 02 09:11:45.035729 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 268, in error_router
+[Fri Sep 02 09:11:45.035806 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]     return self.handle_error(e)
+[Fri Sep 02 09:11:45.035888 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1988, in wsgi_app
+[Fri Sep 02 09:11:45.035973 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]     response = self.full_dispatch_request()
+[Fri Sep 02 09:11:45.036193 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1641, in full_dispatch_request
+[Fri Sep 02 09:11:45.036267 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]     rv = self.handle_user_exception(e)
+[Fri Sep 02 09:11:45.036333 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 271, in error_router
+[Fri Sep 02 09:11:45.036406 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]     return original_handler(e)
+[Fri Sep 02 09:11:45.036471 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1544, in handle_user_exception
+[Fri Sep 02 09:11:45.036544 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]     reraise(exc_type, exc_value, tb)
+[Fri Sep 02 09:11:45.036613 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 268, in error_router
+[Fri Sep 02 09:11:45.036685 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]     return self.handle_error(e)
+[Fri Sep 02 09:11:45.036754 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1639, in full_dispatch_request
+[Fri Sep 02 09:11:45.036828 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]     rv = self.dispatch_request()
+[Fri Sep 02 09:11:45.036894 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1625, in dispatch_request
+[Fri Sep 02 09:11:45.036968 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]     return self.view_functions[rule.endpoint](**req.view_args)
+[Fri Sep 02 09:11:45.037053 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 477, in wrapper
+[Fri Sep 02 09:11:45.037130 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]     resp = resource(*args, **kwargs)
+[Fri Sep 02 09:11:45.037198 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]   File "/usr/local/lib/python2.7/dist-packages/flask/views.py", line 84, in view
+[Fri Sep 02 09:11:45.037318 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]     return self.dispatch_request(*args, **kwargs)
+[Fri Sep 02 09:11:45.037392 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 587, in dispatch_request
+[Fri Sep 02 09:11:45.037466 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]     resp = meth(*args, **kwargs)
+[Fri Sep 02 09:11:45.037534 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]   File "/var/www/virginia/resources/monologue.py", line 61, in post
+[Fri Sep 02 09:11:45.038493 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]     plot = self.__generatePlot(json_data)
+[Fri Sep 02 09:11:45.038570 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]   File "/var/www/virginia/resources/monologue.py", line 75, in __generatePlot
+[Fri Sep 02 09:11:45.038880 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]     return Plot(data['seed'])
+[Fri Sep 02 09:11:45.038953 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]   File "/var/www/virginia/narrative/plot.py", line 42, in __init__
+[Fri Sep 02 09:11:45.040210 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]     self._processor = ProcessorFactory.getProcessor(self.__underlyingPlot['processor'])
+[Fri Sep 02 09:11:45.040283 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]   File "/var/www/virginia/processors/processor_factory.py", line 17, in getProcessor
+[Fri Sep 02 09:11:45.041296 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]     processor = ProcessorFactory.processors[processor_type]()
+[Fri Sep 02 09:11:45.041369 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]   File "/var/www/virginia/processors/ctakes_processor.py", line 13, in __init__
+[Fri Sep 02 09:11:45.042383 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]     self.__loadConfiguration()
+[Fri Sep 02 09:11:45.042461 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]   File "/var/www/virginia/processors/ctakes_processor.py", line 20, in __loadConfiguration
+[Fri Sep 02 09:11:45.042756 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581]     if not self.__svcURL.endsWith('/'):
+[Fri Sep 02 09:11:45.042839 2016] [:error] [pid 2943:tid 139883404580608] [client 10.0.2.2:56581] AttributeError: 'str' object has no attribute 'endsWith'
+[Fri Sep 02 09:12:16.952305 2016] [ssl:warn] [pid 1938:tid 139883512928128] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
+[Fri Sep 02 09:15:14.172539 2016] [ssl:warn] [pid 1938:tid 139883512928128] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
+[Fri Sep 02 09:15:22.220032 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929] mod_wsgi (pid=3086): Exception occurred processing WSGI script '/var/www/virginia/server.wsgi'.
+[Fri Sep 02 09:15:22.220151 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929] Traceback (most recent call last):
+[Fri Sep 02 09:15:22.220272 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 2000, in __call__
+[Fri Sep 02 09:15:22.220693 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]     return self.wsgi_app(environ, start_response)
+[Fri Sep 02 09:15:22.220767 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1991, in wsgi_app
+[Fri Sep 02 09:15:22.220844 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]     response = self.make_response(self.handle_exception(e))
+[Fri Sep 02 09:15:22.220911 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 271, in error_router
+[Fri Sep 02 09:15:22.221119 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]     return original_handler(e)
+[Fri Sep 02 09:15:22.221189 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1567, in handle_exception
+[Fri Sep 02 09:15:22.221263 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]     reraise(exc_type, exc_value, tb)
+[Fri Sep 02 09:15:22.221344 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 268, in error_router
+[Fri Sep 02 09:15:22.221417 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]     return self.handle_error(e)
+[Fri Sep 02 09:15:22.221483 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1988, in wsgi_app
+[Fri Sep 02 09:15:22.221555 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]     response = self.full_dispatch_request()
+[Fri Sep 02 09:15:22.221667 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1641, in full_dispatch_request
+[Fri Sep 02 09:15:22.221757 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]     rv = self.handle_user_exception(e)
+[Fri Sep 02 09:15:22.221839 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 271, in error_router
+[Fri Sep 02 09:15:22.221925 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]     return original_handler(e)
+[Fri Sep 02 09:15:22.221991 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1544, in handle_user_exception
+[Fri Sep 02 09:15:22.222076 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]     reraise(exc_type, exc_value, tb)
+[Fri Sep 02 09:15:22.222141 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 268, in error_router
+[Fri Sep 02 09:15:22.222226 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]     return self.handle_error(e)
+[Fri Sep 02 09:15:22.222298 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1639, in full_dispatch_request
+[Fri Sep 02 09:15:22.222384 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]     rv = self.dispatch_request()
+[Fri Sep 02 09:15:22.222449 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]   File "/usr/local/lib/python2.7/dist-packages/flask/app.py", line 1625, in dispatch_request
+[Fri Sep 02 09:15:22.222535 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]     return self.view_functions[rule.endpoint](**req.view_args)
+[Fri Sep 02 09:15:22.222602 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 477, in wrapper
+[Fri Sep 02 09:15:22.222687 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]     resp = resource(*args, **kwargs)
+[Fri Sep 02 09:15:22.222753 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]   File "/usr/local/lib/python2.7/dist-packages/flask/views.py", line 84, in view
+[Fri Sep 02 09:15:22.222889 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]     return self.dispatch_request(*args, **kwargs)
+[Fri Sep 02 09:15:22.222960 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]   File "/usr/local/lib/python2.7/dist-packages/flask_restful/__init__.py", line 587, in dispatch_request
+[Fri Sep 02 09:15:22.223034 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]     resp = meth(*args, **kwargs)
+[Fri Sep 02 09:15:22.223100 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]   File "/var/www/virginia/resources/monologue.py", line 61, in post
+[Fri Sep 02 09:15:22.224273 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]     plot = self.__generatePlot(json_data)
+[Fri Sep 02 09:15:22.224348 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]   File "/var/www/virginia/resources/monologue.py", line 75, in __generatePlot
+[Fri Sep 02 09:15:22.224650 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]     return Plot(data['seed'])
+[Fri Sep 02 09:15:22.224723 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]   File "/var/www/virginia/narrative/plot.py", line 42, in __init__
+[Fri Sep 02 09:15:22.225765 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]     self._processor = ProcessorFactory.getProcessor(self.__underlyingPlot['processor'])
+[Fri Sep 02 09:15:22.225834 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]   File "/var/www/virginia/processors/processor_factory.py", line 17, in getProcessor
+[Fri Sep 02 09:15:22.227040 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]     processor = ProcessorFactory.processors[processor_type]()
+[Fri Sep 02 09:15:22.227124 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]   File "/var/www/virginia/processors/stanford_processor.py", line 21, in __init__
+[Fri Sep 02 09:15:22.228271 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]     self.__loadConfiguration()
+[Fri Sep 02 09:15:22.228343 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]   File "/var/www/virginia/processors/stanford_processor.py", line 30, in __loadConfiguration
+[Fri Sep 02 09:15:22.228648 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929]     self.__nerSvcURL += 'ner'
+[Fri Sep 02 09:15:22.228733 2016] [:error] [pid 3086:tid 139883259590400] [client 10.0.2.2:56929] AttributeError: StanfordProcessor instance has no attribute '_StanfordProcessor__nerSvcURL'
+[Fri Sep 02 09:15:56.523266 2016] [ssl:warn] [pid 1938:tid 139883512928128] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name

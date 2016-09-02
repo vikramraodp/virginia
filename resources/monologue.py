@@ -1,8 +1,6 @@
 from flask import Flask, jsonify, request, abort, make_response, g, url_for
 from flask.ext.restful import Api, Resource, reqparse, fields, marshal_with
 
-from processors.stanford_processor import StanfordProcessor
-from processors.textblob_processor import TextBlobProcessor
 from narrative.plot import Plot
 
 import time
@@ -32,8 +30,6 @@ def configure_log(level=None,name=None):
 class Monologue(Resource):
 
     def __init__(self):
-        self.processor = StanfordProcessor()
-        #self.processor = TextBlobProcessor()
         configure_log(logging.DEBUG,__name__)
 
     # post json data format is as follows
@@ -55,7 +51,8 @@ class Monologue(Resource):
                     plot = self.__generatePlot(elem)
                     if not plot or not plot.valid():
                         abort(422)
-                    output = self.processor.process(plot, elem['monologue'])
+                    processor = plot.processor()
+                    output = processor.process(plot, elem['monologue'])
                     results.append(output)
                 response = make_response(json.dumps(results))
                 response.headers['content-type'] = 'application/json; charset=utf-8'
@@ -66,7 +63,8 @@ class Monologue(Resource):
                 if not plot or not plot.valid():
                     logger.error('Plot Valid - ' + str(plot.valid()))
                     abort(422)
-                response = make_response(json.dumps(self.processor.process(plot, json_data['monologue'])))
+                processor = plot.processor()
+                response = make_response(json.dumps(processor.process(plot, json_data['monologue'])))
                 response.headers['content-type'] = 'application/json; charset=utf-8'
                 return response
 

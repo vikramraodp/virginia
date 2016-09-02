@@ -3,7 +3,7 @@ from strategy.weighted_match import WeightedMatchStrategy
 
 import requests
 import json
-
+import ConfigParser
 # from nltk.tag.stanford import StanfordPOSTagger
 # from nltk.tag import StanfordNERTagger
 # from nltk.parse.stanford import StanfordParser
@@ -18,6 +18,17 @@ class StanfordProcessor:
         nltk.data.path.append('/var/www/virginia/nltk_data/')
         self._context = StanfordProcessorContext()
         self._strategy = WeightedMatchStrategy()
+        self.__loadConfiguration()
+
+    def __loadConfiguration(self):
+        configParser = ConfigParser.RawConfigParser()
+        configFilePath = r'/var/www/virginia/configuration/config.ini'
+        configParser.read(configFilePath)
+        baseURL = configParser.get('taggerservice','baseURL')
+        if not baseURL.endswith('/'):
+            baseURL += '/'
+        self.__nerSvcURL = baseURL + 'ner'
+        self.__posSvcURL = baseURL + 'pos'
 
     def __processingPreflight(self, monologue):
         self.result = {}
@@ -30,7 +41,7 @@ class StanfordProcessor:
     def _tagEntities(self):
         data = {'monologue': self.result['in']}
         headers = {'Content-Type':'application/json', 'Accept':'application/json'}
-        r = requests.post(url = 'http://localhost:8080/taggerservice/ner', headers = headers, data = json.dumps(data))
+        r = requests.post(url = self.__nerSvcURL, headers = headers, data = json.dumps(data))
         tags = []
         if r.status_code == 200:
             annotatedData = r.json()
@@ -43,7 +54,7 @@ class StanfordProcessor:
     def _tagPartOfSpeech(self):
         data = {'monologue': self.result['in']}
         headers = {'Content-Type':'application/json', 'Accept':'application/json'}
-        r = requests.post(url = 'http://localhost:8080/taggerservice/pos', headers = headers, data = json.dumps(data))
+        r = requests.post(url = self.__posSvcURL, headers = headers, data = json.dumps(data))
         tags = []
         if r.status_code == 200:
             annotatedData = r.json()
@@ -58,7 +69,5 @@ class StanfordProcessor:
 
     def process(self, plot, monologue):
         self.__processingPreflight(monologue)
-
         self.result['out'] = self._strategy.apply(plot,self._context)
-
         return self.result
