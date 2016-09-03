@@ -11,8 +11,8 @@ from applogging.virginia_logger import Logger
 
 class Monologue(Resource):
 
-    def __init__(self):
-        #TODO:
+    # def __init__(self):
+    #     
 
     # post json data format is as follows
     # {
