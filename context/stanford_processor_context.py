@@ -1,29 +1,10 @@
-
-import logging
-logger = logging.getLogger(__name__)
-
-def configure_log(level=None,name=None):
-    logger = logging.getLogger(name)
-    logger.setLevel(level)
-
-    file_handler = logging.FileHandler('/var/www/virginia/logs/%s.log' % name,'w','utf-8')
-    file_handler.setLevel(logging.DEBUG)
-    file_format = logging.Formatter('%(asctime)s %(levelname)s: %(message)s [in %(pathname)s:%(lineno)d in %(funcName)s]')
-    file_handler.setFormatter(file_format)
-    logger.addHandler(file_handler)
-
-    console_handler = logging.StreamHandler()
-    console_handler.setLevel(logging.INFO)
-    console_format = logging.Formatter('%(message)s')
-    console_handler.setFormatter(console_format)
-    logger.addHandler(console_handler)
+from applogging.virginia_logger import Logger
 
 class StanfordProcessorContext(object):
 
     def __init__(self):
         super(StanfordProcessorContext, self).__init__()
         self.__clear()
-        configure_log(logging.DEBUG,__name__)
 
     def __clear(self):
         self._tokens = []
@@ -46,5 +27,5 @@ class StanfordProcessorContext(object):
             ner,pos = self.__resolveToken(token)
             all_list.append((idx,token,ner,pos))
 
-        logger.debug(all_list)
+        Logger.getLogger().debug(all_list)
         return all_list

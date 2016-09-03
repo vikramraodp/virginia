@@ -1,0 +1,2 @@
+2016-09-03 14:23:32,117 INFO: received ocr request... [in /var/www/virginia/virginia.py:29 in ocr]
+2016-09-03 14:23:36,546 INFO: saved file to: 1e42be84-63cb-4dab-a09e-8b1fc3883d9d.jpg [in /var/www/virginia/virginia.py:36 in ocr]

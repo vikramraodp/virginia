@@ -7,30 +7,12 @@ import time
 import os
 import json
 
-import logging
-logger = logging.getLogger(__name__)
-
-def configure_log(level=None,name=None):
-    logger = logging.getLogger(name)
-    logger.setLevel(level)
-
-    file_handler = logging.FileHandler('/var/www/virginia/logs/%s.log' % name,'w','utf-8')
-    file_handler.setLevel(logging.DEBUG)
-    file_format = logging.Formatter('%(asctime)s %(levelname)s: %(message)s [in %(pathname)s:%(lineno)d in %(funcName)s]')
-    file_handler.setFormatter(file_format)
-    logger.addHandler(file_handler)
-
-    console_handler = logging.StreamHandler()
-    console_handler.setLevel(logging.INFO)
-    console_format = logging.Formatter('%(message)s')
-    console_handler.setFormatter(console_format)
-    logger.addHandler(console_handler)
-
+from applogging.virginia_logger import Logger
 
 class Monologue(Resource):
 
     def __init__(self):
-        configure_log(logging.DEBUG,__name__)
+        #TODO:
 
     # post json data format is as follows
     # {
@@ -59,9 +41,7 @@ class Monologue(Resource):
                 return response
             elif isinstance(json_data, dict):
                 plot = self.__generatePlot(json_data)
-                logger.debug(str(plot==None))
                 if not plot or not plot.valid():
-                    logger.error('Plot Valid - ' + str(plot.valid()))
                     abort(422)
                 processor = plot.processor()
                 response = make_response(json.dumps(processor.process(plot, json_data['monologue'])))
