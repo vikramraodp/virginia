@@ -1,0 +1,5 @@
+{
+  "characters": [ "symptoms", "findings", "measurement", "medication", "procedures", "labevents","patienthistory","familyhistory"],
+  "identification": [ "SignsAndSymptoms", "Findings", "Measurement", "Medications", "Procedures", "LabEvents" ,"MedicalHistory", "FamilyHistory"],
+  "processor" : "cTakes-v2"
+}

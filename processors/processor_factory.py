@@ -1,10 +1,11 @@
 from processors.stanford_processor import StanfordProcessor
 from processors.textblob_processor import TextBlobProcessor
 from processors.ctakes_processor import CTakesProcessor
+from processors.ctakesadv_processor import CTakesAdvancedProcessor
 
 class ProcessorFactory:
 
-    processors = { 'stanford':StanfordProcessor, 'textblob':TextBlobProcessor, 'cTakes':CTakesProcessor }
+    processors = { 'stanford':StanfordProcessor, 'textblob':TextBlobProcessor, 'cTakes':CTakesProcessor, 'cTakes-v2':CTakesAdvancedProcessor }
     instances = {}
 
     @staticmethod

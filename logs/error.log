@@ -219,3 +219,43 @@
 [Sat Sep 03 14:22:06.440874 2016] [ssl:warn] [pid 4759:tid 140639317301120] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
 [Sat Sep 03 14:22:06.452919 2016] [ssl:warn] [pid 4760:tid 140639317301120] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
 [Sat Sep 03 14:23:26.064872 2016] [ssl:warn] [pid 4760:tid 140639317301120] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
+[Sun Sep 04 15:10:02.454162 2016] [ssl:warn] [pid 1605:tid 140243175872384] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
+[Sun Sep 04 15:10:02.473797 2016] [ssl:warn] [pid 1606:tid 140243175872384] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
+[Sun Sep 04 15:10:08.645920 2016] [:error] [pid 1609:tid 140243067524864] [client 10.0.2.2:64338] mod_wsgi (pid=1609): Target WSGI script '/var/www/virginia/server.wsgi' cannot be loaded as Python module.
+[Sun Sep 04 15:10:08.646023 2016] [:error] [pid 1609:tid 140243067524864] [client 10.0.2.2:64338] mod_wsgi (pid=1609): Exception occurred processing WSGI script '/var/www/virginia/server.wsgi'.
+[Sun Sep 04 15:10:08.646110 2016] [:error] [pid 1609:tid 140243067524864] [client 10.0.2.2:64338] Traceback (most recent call last):
+[Sun Sep 04 15:10:08.646198 2016] [:error] [pid 1609:tid 140243067524864] [client 10.0.2.2:64338]   File "/var/www/virginia/server.wsgi", line 14, in <module>
+[Sun Sep 04 15:10:08.647299 2016] [:error] [pid 1609:tid 140243067524864] [client 10.0.2.2:64338]     from virginia import monologue_svc as application
+[Sun Sep 04 15:10:08.647392 2016] [:error] [pid 1609:tid 140243067524864] [client 10.0.2.2:64338]   File "/var/www/virginia/virginia.py", line 22, in <module>
+[Sun Sep 04 15:10:08.648308 2016] [:error] [pid 1609:tid 140243067524864] [client 10.0.2.2:64338]     vision_api_client = VisionApi()
+[Sun Sep 04 15:10:08.648388 2016] [:error] [pid 1609:tid 140243067524864] [client 10.0.2.2:64338]   File "/var/www/virginia/utils/vision.py", line 16, in __init__
+[Sun Sep 04 15:10:08.649551 2016] [:error] [pid 1609:tid 140243067524864] [client 10.0.2.2:64338]     credentials = GoogleCredentials.get_application_default()
+[Sun Sep 04 15:10:08.649632 2016] [:error] [pid 1609:tid 140243067524864] [client 10.0.2.2:64338]   File "/usr/local/lib/python2.7/dist-packages/oauth2client/client.py", line 1288, in get_application_default
+[Sun Sep 04 15:10:08.650346 2016] [:error] [pid 1609:tid 140243067524864] [client 10.0.2.2:64338]     return GoogleCredentials._get_implicit_credentials()
+[Sun Sep 04 15:10:08.650433 2016] [:error] [pid 1609:tid 140243067524864] [client 10.0.2.2:64338]   File "/usr/local/lib/python2.7/dist-packages/oauth2client/client.py", line 1273, in _get_implicit_credentials
+[Sun Sep 04 15:10:08.650522 2016] [:error] [pid 1609:tid 140243067524864] [client 10.0.2.2:64338]     credentials = checker()
+[Sun Sep 04 15:10:08.650599 2016] [:error] [pid 1609:tid 140243067524864] [client 10.0.2.2:64338]   File "/usr/local/lib/python2.7/dist-packages/oauth2client/client.py", line 1224, in _implicit_credentials_from_files
+[Sun Sep 04 15:10:08.650683 2016] [:error] [pid 1609:tid 140243067524864] [client 10.0.2.2:64338]     credentials_filename = _get_environment_variable_file()
+[Sun Sep 04 15:10:08.650760 2016] [:error] [pid 1609:tid 140243067524864] [client 10.0.2.2:64338]   File "/usr/local/lib/python2.7/dist-packages/oauth2client/client.py", line 1372, in _get_environment_variable_file
+[Sun Sep 04 15:10:08.650844 2016] [:error] [pid 1609:tid 140243067524864] [client 10.0.2.2:64338]     ' environment variable) does not exist!')
+[Sun Sep 04 15:10:08.650929 2016] [:error] [pid 1609:tid 140243067524864] [client 10.0.2.2:64338] ApplicationDefaultCredentialsError: File /var/www/virginia/api_keys/google_api.json (pointed by GOOGLE_APPLICATION_CREDENTIALS environment variable) does not exist!
+[Mon Sep 05 09:30:46.279223 2016] [ssl:warn] [pid 13702:tid 139903509247872] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
+[Mon Sep 05 09:30:46.294908 2016] [ssl:warn] [pid 13703:tid 139903509247872] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
+[Mon Sep 05 09:33:02.758640 2016] [ssl:warn] [pid 13807:tid 140259150280576] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
+[Mon Sep 05 09:33:02.772118 2016] [ssl:warn] [pid 13808:tid 140259150280576] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
+[Mon Sep 05 09:43:49.117242 2016] [ssl:warn] [pid 14057:tid 140648354936704] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
+[Mon Sep 05 09:43:49.131437 2016] [ssl:warn] [pid 14058:tid 140648354936704] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
+[Mon Sep 05 10:09:53.545014 2016] [proxy_http:error] [pid 14061:tid 140648065775360] (70007)The timeout specified has expired: [client 10.0.2.2:51247] AH01102: error reading status line from remote server 0.0.0.0:7000, referer: http://localhost:8080/
+[Mon Sep 05 10:09:53.546313 2016] [proxy:error] [pid 14061:tid 140648065775360] [client 10.0.2.2:51247] AH00898: Error reading from remote server returned by /report, referer: http://localhost:8080/
+[Mon Sep 05 10:09:54.075045 2016] [proxy_http:error] [pid 14062:tid 140647990241024] (70007)The timeout specified has expired: [client 127.0.0.1:41671] AH01102: error reading status line from remote server 0.0.0.0:7000
+[Mon Sep 05 10:09:54.075505 2016] [proxy:error] [pid 14062:tid 140647990241024] [client 127.0.0.1:41671] AH00898: Error reading from remote server returned by /virginia/monologue
+[Fri Sep 09 12:12:51.896924 2016] [ssl:warn] [pid 1697:tid 140405888927616] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
+[Fri Sep 09 12:12:51.915411 2016] [ssl:warn] [pid 1698:tid 140405888927616] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
+[Fri Sep 09 12:13:16.498511 2016] [proxy:error] [pid 1702:tid 140405747087104] (111)Connection refused: AH00957: HTTP: attempt to connect to 0.0.0.0:7000 (0.0.0.0) failed
+[Fri Sep 09 12:13:16.498870 2016] [proxy:error] [pid 1702:tid 140405747087104] AH00959: ap_proxy_connect_backend disabling worker for (0.0.0.0) for 60s
+[Fri Sep 09 12:13:16.499144 2016] [proxy_http:error] [pid 1702:tid 140405747087104] [client 10.0.2.2:53304] AH01114: HTTP: failed to make connection to backend: 0.0.0.0
+[Fri Sep 09 12:13:33.214237 2016] [proxy:error] [pid 1701:tid 140405721908992] (111)Connection refused: AH00957: HTTP: attempt to connect to 0.0.0.0:7000 (0.0.0.0) failed
+[Fri Sep 09 12:13:33.214822 2016] [proxy:error] [pid 1701:tid 140405721908992] AH00959: ap_proxy_connect_backend disabling worker for (0.0.0.0) for 60s
+[Fri Sep 09 12:13:33.215053 2016] [proxy_http:error] [pid 1701:tid 140405721908992] [client 10.0.2.2:53310] AH01114: HTTP: failed to make connection to backend: 0.0.0.0
+[Fri Sep 09 12:16:02.790200 2016] [ssl:warn] [pid 1907:tid 140708653315968] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
+[Fri Sep 09 12:16:02.804328 2016] [ssl:warn] [pid 1908:tid 140708653315968] AH01909: RSA certificate configured for default:443 does NOT include an ID which matches the server name
