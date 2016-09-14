@@ -1,6 +1,5 @@
 {
   "characters": [ "first_name", "last_name", "age", "age_unit", "gender", "address", "phone" ],
   "identification": [ "PERSON", "PERSON", "AGE", "AGE_UNIT", "GENDER", "LOCATION", "O" ],
-  "synesthesia": [ "NNP", "NNP", "CD", "NN", "JJ", "NNP", "CD" ],
   "processor" : "stanford"
 }

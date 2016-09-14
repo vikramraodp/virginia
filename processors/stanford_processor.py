@@ -1,6 +1,8 @@
 from context.stanford_processor_context import StanfordProcessorContext
 from strategy.weighted_match import WeightedMatchStrategy
 
+from applogging.virginia_logger import Logger
+
 import requests
 import json
 import ConfigParser
@@ -68,6 +70,7 @@ class StanfordProcessor:
         self._context.create(self.tokens,self._tagEntities(),self._tagPartOfSpeech())
 
     def process(self, plot, monologue):
+        Logger.getLogger().debug(monologue)
         self.__processingPreflight(monologue)
         self.result['out'] = self._strategy.apply(plot,self._context)
         return self.result
