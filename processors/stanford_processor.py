@@ -67,7 +67,8 @@ class StanfordProcessor:
         #return self.posTagger.tag(text.split())
 
     def __updateprocessorContext(self):
-        self._context.create(self.tokens,self._tagEntities(),self._tagPartOfSpeech())
+        #self._context.create(self.tokens,self._tagEntities(),self._tagPartOfSpeech())
+        self._context.create(self.tokens,self._tagEntities(),[])
 
     def process(self, plot, monologue):
         Logger.getLogger().debug(monologue)
