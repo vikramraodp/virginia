@@ -6,6 +6,7 @@ from applogging.virginia_logger import Logger
 import requests
 import json
 import ConfigParser
+import itertools
 # from nltk.tag.stanford import StanfordPOSTagger
 # from nltk.tag import StanfordNERTagger
 # from nltk.parse.stanford import StanfordParser
@@ -36,9 +37,14 @@ class StanfordProcessor:
         self.result = {}
         self.result['in'] = monologue
         self.result['out'] = None
-        self.tokens = nltk.word_tokenize(monologue)
+        #self.tokens = nltk.word_tokenize(monologue)
+        self.__generateTokens(monologue)
 
         self.__updateprocessorContext()
+
+    def __generateTokens(self, monologue):
+        self.tokens = nltk.word_tokenize(monologue)
+        self.tokens = self.tokens + list(itertools.chain.from_iterable([t.split('-') for t in self.tokens if '-' in t]))
 
     def _tagEntities(self):
         data = {'monologue': self.result['in']}
